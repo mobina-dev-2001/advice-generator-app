@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/pomodoro-app-YOPo7cuaVf)
-- Live Site URL: [Live site URL](https://github.com/mobina-dev-2001/pomodoro-app)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/advice-generator-app-X1FfRXThUP)
+- Live Site URL: [Live site URL](https://mobina-dev-2001.github.io/advice-generator-app/)
 
 ## My process
 
