@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* colors */
+    --clr-ebony-clay: 218, 23%, 16%;
+    --clr-oxford-blue: 217, 19%, 24%;
+    --clr-botticelli: 193, 38%, 86%;
+    --clr-aquamarine: 150, 100%, 66%;
+
+    /* font sizes */
+    --fs-quote: 1.75rem;
+    --fs-heading: .813rem;
+
+    /* font families */
+    --ff-manrope: "Manrope", sans-serif;
+
+    /* letter spacings */
+    --ls-large: 4.09px;
+    --ls-small: -.3px;
+}
+
+@media (max-width: 500px) {
+    :root {
+    /* font sizes */
+    --fs-quote: 1.5rem;
+    --fs-heading: .688rem;
+
+    /* letter spacings */
+    --ls-large: 3.46px;
+    --ls-small: -.26px;
+    }
+}
+
+::selection {
+    background: hsl(var(--clr-ebony-clay));
+    color: hsl(var(--clr-botticelli));
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: hsl(var(--clr-ebony-clay));
+    font-family: var(--ff-manrope);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.advice-container {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    max-width: 33.75rem;
+    padding: 3rem;
+    background: hsl(var(--clr-oxford-blue));
+    border-radius: .938rem;
+    box-shadow: 30px 50px 80px 0 rgba(0, 0, 0, 10.02%);
+}
+
+@media (max-width: 500px) {
+    .advice-container {
+        border-radius: .625rem;
+    }
+}
+
+.advice-id {
+    color: hsl(var(--clr-aquamarine));
+    font-size: var(--fs-heading);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-large);
+}
+
+.advice-text {
+    justify-items: center;
+    width: 100%;
+    color: hsl(var(--clr-botticelli));
+    font-size: var(--fs-quote);
+    letter-spacing: var(--ls-small);
+}
+
+.divider {
+    margin-block: .5rem 1.5rem;
+}
+
+.random-advice-button {
+    position: absolute;
+    bottom: -2rem;
+    display: grid;
+    justify-self: center;
+    place-content: center;
+    width: 4rem;
+    aspect-ratio: 1;
+    background: hsl(var(--clr-aquamarine));
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.random-advice-button:hover,
+.random-advice-button:focus {
+    box-shadow: 0 0 40px 0 hsl(var(--clr-aquamarine));
+}
+
+.random-advice-button:disabled img {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
